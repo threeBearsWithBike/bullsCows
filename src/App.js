@@ -3,30 +3,35 @@ import { Context } from './store/context';
 import { useReducer } from 'react';
 import { reducer } from './store/reducer';
 import { initialState } from './store/initialState';
-import Result from './components/Result';
-import Button from './components/Button';
-import Apply from './components/Apply';
-import Win from './components/Win.js';
+import bull from './img/bull_pic.jpg';
+import Description from './components/Description';
+import Game from './components/Game';
+import { TbFileDescription } from "react-icons/tb";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div className="App">
       <Context.Provider value={{state, dispatch}}>
-        hello world!
-        <br />
-        <span>{state.targetNumber}</span>
-        <br />
-        <Result />
-        <br />
-        {state.targetNumber.length === 0 ?
-        <button onClick={() => dispatch({type: 'getTargetNumber'})}>get number</button> :
-        state.currentNumber.map((value, idx) => <Button value={value} key={idx} index={idx} />)}
-        {!state.currentNumber.includes(10) ? <Apply /> : ''}
-        {state.bulls === 4 && <Win />}
+        {
+          !state.isOpenDescription &&
+          <>
+            <img src={bull} alt="bull" className='bull-pic'/>
+            <span onClick={() => dispatch({type: 'setIsOpenDescription'})}>
+              Описание игры
+              &nbsp; 
+              <TbFileDescription />
+            </span>
+          </>
+        }
+        {
+          state.isOpenDescription ? 
+            <Description /> : 
+            <Game />
+        }
       </Context.Provider>
     </div>
-  );
+);
 }
 
 export default App;

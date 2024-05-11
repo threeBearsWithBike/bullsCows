@@ -17,7 +17,7 @@ const Apply = () => {
         <button
             onClick={handlerClick}
         >
-            Apply
+            Принять
         </button>
     )
 }

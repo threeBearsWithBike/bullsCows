@@ -34,6 +34,11 @@ export const reducer = (state, action) => {
             break;
         }
 
+        case 'setIsOpenDescription': {
+            state = {...state, isOpenDescription: !state.isOpenDescription};
+            break;
+        }
+
         default:
             state = {...state};
     }

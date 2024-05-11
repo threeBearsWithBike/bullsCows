@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Context } from "../store/context";
+import '../index.css';
 
 const NUMBER_LINE = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -19,7 +20,7 @@ const Button = ({ value, index }) => {
     }
     return (
         <button
-            style={{minWidth: '20px', minHeight: '20px'}}
+            className='Button'
             onClick={handlerClick}
         >
             {value !== 10 ? value : '*'}

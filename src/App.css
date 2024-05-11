@@ -1,0 +1,20 @@
+.App {
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: stretch;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.bull-pic {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
