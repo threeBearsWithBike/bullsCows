@@ -3,7 +3,7 @@ import { Context } from './store/context';
 import { useReducer } from 'react';
 import { reducer } from './store/reducer';
 import { initialState } from './store/initialState';
-import bull from './img/bull_pic.jpg';
+import bull from './img/bull_pic.png';
 import Description from './components/Description';
 import Game from './components/Game';
 import { TbFileDescription } from "react-icons/tb";
@@ -15,14 +15,16 @@ function App() {
       <Context.Provider value={{state, dispatch}}>
         {
           !state.isOpenDescription &&
-          <>
-            <img src={bull} alt="bull" className='bull-pic'/>
-            <span onClick={() => dispatch({type: 'setIsOpenDescription'})}>
-              Описание игры
-              &nbsp; 
+            <h1 className='app-title'>
+              Быки и Коровы
+              <span
+                className='btn-descrition'
+                onClick={() => dispatch({type: 'setIsOpenDescription'})}
+              >
               <TbFileDescription />
-            </span>
-          </>
+              </span>
+              <img src={bull} alt="bull" className='bull-pic'/>  
+            </h1>
         }
         {
           state.isOpenDescription ? 

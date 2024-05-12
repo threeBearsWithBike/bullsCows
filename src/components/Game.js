@@ -14,6 +14,7 @@ const Game = () => {
                 {
                     state.targetNumber.length === 0 ?
                     <button
+                        className='game-btn'
                         onClick={() => dispatch({type: 'getTargetNumber'})}
                     >
                         Старт

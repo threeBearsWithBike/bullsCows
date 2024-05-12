@@ -15,6 +15,7 @@ const Apply = () => {
     }
     return (
         <button
+            className='Apply-btn'
             onClick={handlerClick}
         >
             Принять
