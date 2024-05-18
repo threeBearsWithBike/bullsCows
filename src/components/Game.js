@@ -9,7 +9,7 @@ import '../index.css';
 const Game = () => {
     const {state, dispatch} = useContext(Context);
     return (
-        <div>
+        <div className='Game'>
             <div>
                 {
                     state.targetNumber.length === 0 ?
@@ -22,13 +22,14 @@ const Game = () => {
                     <>
                         <Result />
                         <TargetNumber />
+                        <Apply />
                     </>
                 }
             </div>
             <div>
-                {
+                {/* {
                     !state.currentNumber.includes(10) && <Apply />
-                }
+                } */}
                 {
                     state.bulls === 4 && <Win />
                 }

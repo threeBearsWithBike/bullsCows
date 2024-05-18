@@ -16,6 +16,7 @@ const Apply = () => {
     return (
         <button
             className='Apply-btn'
+            style={{visibility: !state.currentNumber.includes(10) ? 'visible' : 'hidden'}}
             onClick={handlerClick}
         >
             Принять

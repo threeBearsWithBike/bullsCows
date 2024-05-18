@@ -3,5 +3,6 @@ export const initialState = {
     currentNumber: [10, 10, 10, 10],
     bulls: 0,
     cows: 0,
-    isOpenDescription: false
+    isOpenDescription: false,
+    result: false
 };

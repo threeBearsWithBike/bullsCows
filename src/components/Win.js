@@ -11,11 +11,12 @@ const Win = () => {
         <div className='Win'>
             <div className="Win-message">
                 <h2>{state.targetNumber.join('')}</h2>
-                <h1>Вы победили!</h1>
+                <h1 className='Win-title'>Вы победили!</h1>
                 <button
+                    className='Win-btn'
                     onClick={handlerClick}
                 >
-                    Play Again
+                    Играть
                 </button>
             </div>
         </div>

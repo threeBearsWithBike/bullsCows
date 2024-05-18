@@ -12,7 +12,7 @@ const Description = () => {
         <div className='Description'>
             <div className='Description-main'>
                 <h1 className='description-title'>Быки и коровы</h1>
-                <h2 className='description-title'>Описание</h2>
+                <h2>Описание</h2>
                 <p>Быки и коровы - логическая игра, в ходе которой необходимо отгадать тайное 4-значное число с неповторяющимися цифрами.</p>
                 <p>Выберите ваш вариант числа, каждая совпавшая цифра в числе - это плюс одна корова, каждое совпадение с позицией в числе - это плюс один бык. Удачи!</p>
                 <div className='Description-main-btn'>

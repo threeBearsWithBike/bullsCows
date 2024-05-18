@@ -1,16 +1,93 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
 body {
     position: relative;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     width: 100%;
     height: 100vh;
     background-color: #f5f5dc;
     overflow: hidden;
 }
+
+.App {
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@media screen and (max-height: 480px) {
+    .App {
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .bull-pic {
+        width: 350px;
+        height: 350px;
+        margin: 0;
+    }
+}
+
+.Game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header,
+.Game {
+    flex: 1 1 auto;
+}
+
+.bull-pic {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    object-fit: contain;
+}
+
+.app-title {
+    display: inline-block;
+    position: relative;
+    color: green;
+    font-size: 2rem;
+}
+
+.btn-descrition,
+.result-btn {
+    position: absolute;
+    top: -5px;
+    right: -17px;
+    font-size: 14px;
+    color:black;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn-descrition:hover,
+.result-btn:hover {
+    color: brown;
+}
+
+
 .Win {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -25,27 +102,48 @@ body {
 
 .Win-message {
     padding: 20px 50px;
-    border: 3px solid black;
-    border-radius: 5px;
+    border: 5px solid black;
+    border-radius: 3px;
     background-color: beige;
+    box-shadow: 3px 3px 7px gray;
+}
+
+.Win-title {
+    color: green;
+    font-size: 2rem;
+}
+
+.Win-btn {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 2px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+    background-color: #f3f3bf;
+}
+
+.Win-btn:hover {
+    color: brown;
+    border-color: brown;
 }
 
 .Result {
-    width: 100%;
+    position: relative;
     display: flex;
     margin-bottom: 20px;
-    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     align-items: stretch;
 }
 
 .Result > div {
-    flex: 1 1 25%;
+    flex: 1 0 auto;
 }
 
 .Result-icon {
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 .Result-value {
@@ -54,8 +152,8 @@ body {
 }
 
 .TargetNumber {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 250px;
+    margin: 0 auto 30px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -65,7 +163,7 @@ body {
 
 .Button {
     height: 70px;
-    flex: 0 1 25%;
+    flex: 0 0 25%;
     font-size: 3rem;
     font-weight: bold;
     cursor: pointer;
@@ -77,14 +175,12 @@ body {
     justify-content: start;
     align-items: stretch;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     color: green;
 }
 
 .Description-main {
-    padding: 20px;
     flex: 1 0 auto;
-    font-family: 'Arial';
 }
 
 .Description-main p {
@@ -104,7 +200,7 @@ body {
 }
 
 .description-title {
-    display: block;
+    font-size: 2rem;
     align-items: center;
 }
 
@@ -134,7 +230,6 @@ body {
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
-    /* background-color: #f3f3bf; */
     transition: .5s;
 }
 

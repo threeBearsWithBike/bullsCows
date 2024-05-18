@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import { Context } from './store/context';
 import { useReducer } from 'react';
 import { reducer } from './store/reducer';
@@ -15,16 +15,19 @@ function App() {
       <Context.Provider value={{state, dispatch}}>
         {
           !state.isOpenDescription &&
-            <h1 className='app-title'>
-              Быки и Коровы
-              <span
-                className='btn-descrition'
-                onClick={() => dispatch({type: 'setIsOpenDescription'})}
-              >
-              <TbFileDescription />
-              </span>
+            <header>
+              <h1 className='app-title'>
+                Быки и Коровы
+                <span
+                  className='btn-descrition'
+                  onClick={() => dispatch({type: 'setIsOpenDescription'})}
+                >
+                <TbFileDescription />
+                </span>
+              </h1>
+              <br />
               <img src={bull} alt="bull" className='bull-pic'/>  
-            </h1>
+            </header>
         }
         {
           state.isOpenDescription ? 

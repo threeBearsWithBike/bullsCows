@@ -39,6 +39,11 @@ export const reducer = (state, action) => {
             break;
         }
 
+        case 'typeResult': {
+            state = {...state, result: !state.result};
+            break;
+        }
+
         default:
             state = {...state};
     }
