@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/bullsCows/static/css/main.944b81ae.css",
+    "main.js": "/bullsCows/static/js/main.efddb842.js",
+    "static/media/bull_pic.png": "/bullsCows/static/media/bull_pic.77c971b2d0af5cd71532.png",
+    "index.html": "/bullsCows/index.html",
+    "main.944b81ae.css.map": "/bullsCows/static/css/main.944b81ae.css.map",
+    "main.efddb842.js.map": "/bullsCows/static/js/main.efddb842.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.944b81ae.css",
+    "static/js/main.efddb842.js"
+  ]
+}
