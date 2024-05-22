@@ -23,7 +23,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
-    padding: 10px;
+    padding: 50px 10px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -33,12 +33,6 @@ body {
         width: 100%;
         justify-content: space-around;
         flex-direction: row;
-    }
-
-    .bull-pic {
-        width: 350px;
-        height: 350px;
-        margin: 0;
     }
 }
 
